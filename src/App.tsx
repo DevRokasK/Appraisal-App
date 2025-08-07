@@ -1,25 +1,39 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './styles/App.css';
+
+import Box from '@mui/material/Box';
+
+import { ThanksTag } from './components/ThanksTag';
+import { ThanksForm } from './components/ThanksForm';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+      <Box
+        sx={{
+          maxWidth: '600px',
+          width: '100%',
+          margin: '0 auto',
+          padding: '16px',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '16px',
+        }}
+      >
+        <Box
+          className='thanksTitle'
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <img src="/companyLogo.png" alt="Company Logo" style={{ height: '64px' }} />
+        </Box>
+        <Box
+          className='thanksTitle'
+        >
+          <h1>Pasakyk #AČIŪ už</h1>
+          <ThanksTag />
+        </Box>
+        <ThanksForm />
+      </Box>
+    </div >
   );
 }
 
